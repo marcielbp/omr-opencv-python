@@ -1,0 +1,164 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{fmtcount}
+\usepackage{tikz}
+\newcounter{hexByteFilled}
+\newcounter{hexByteBlank}
+\usepackage{geometry}
+\usepackage{comment}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=10mm,
+ right=0mm,
+ top=0mm,
+ }
+\title{template}
+\author{Marciel Barros}
+\date{May 2020}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.855]
+    % Draw blocks, inputs and outputs
+    %\foreach \y in {0,1,2,3,4,5} {
+    %    \node at (0,-\y) {\texttt{0x0\y}};
+    %    \draw[step=1cm] (0.99,-\y) grid (9,-\y+1);
+    %}
+\foreach \x in {1,...,8}{
+\filldraw (0.5*\x,0.675) rectangle ++(0.3cm,0.9cm) ;}
+\foreach \x in {11,...,18}{
+\filldraw (0.5*\x,0.675) rectangle ++(0.3cm,0.9cm) ;}
+\foreach \x in {21,...,28}{
+\filldraw (0.5*\x,0.675) rectangle ++(0.3cm,0.9cm) ;}
+\foreach \x in {31,...,38}{
+\filldraw (0.5*\x,0.675) rectangle ++(0.3cm,0.9cm) ;}
+
+\foreach \x in {1,...,8}{
+\filldraw (0.5*\x,-33.125) rectangle ++(0.3cm,0.9cm) ;}
+\foreach \x in {11,...,18}{
+\filldraw (0.5*\x,-33.125) rectangle ++(0.3cm,0.9cm) ;}
+\foreach \x in {21,...,28}{
+\filldraw (0.5*\x,-33.125) rectangle ++(0.3cm,0.9cm) ;}
+\foreach \x in {31,...,38}{
+\filldraw (0.5*\x,-33.125) rectangle ++(0.3cm,0.9cm) ;}
+
+
+
+\foreach \y in {0,...,63} {
+\filldraw (20,-0.125-0.5*\y) rectangle ++(0.9cm,0.3cm) ;
+}
+
+       \filldraw (20,0.675) rectangle ++(0.9cm,0.9cm) ;
+       \filldraw (20,-33.125) rectangle ++(0.9cm,0.9cm) ;
+       
+       \filldraw (-0.875,0.675) rectangle ++(0.9cm,0.9cm) ;
+       \filldraw (-0.875,-33.125) rectangle ++(0.9cm,0.9cm) ;
+
+      
+\foreach \y in {0,...,63} {
+\node at (0,-0.5*\y) {\texttt{{0x\padzeroes[2]\Hexadecimalnum{\thehexByteBlank}}\stepcounter{hexByteBlank}}};
+}
+\foreach \y in {0,...,63} {
+\node at (5,-0.5*\y) {\texttt{{0x\padzeroes[2]\Hexadecimalnum{\thehexByteBlank}}\stepcounter{hexByteBlank}}};
+}
+\foreach \y in {0,...,63} {
+\node at (10,-0.5*\y) {\texttt{{0x\padzeroes[2]\Hexadecimalnum{\thehexByteBlank}}\stepcounter{hexByteBlank}}};
+}
+\foreach \y in {0,...,63} {
+\node at (15,-0.5*\y) {\texttt{{0x\padzeroes[2]\Hexadecimalnum{\thehexByteBlank}}\stepcounter{hexByteBlank}}};
+}
+
+
+\foreach \y in {0,...,63} {
+    \foreach \x in {1,...,8}{
+    \draw (0.5*\x,-0.15-0.5*\y) rectangle ++(0.3cm,0.3cm);
+    }
+    \foreach \x in {11,...,18}{
+    \draw (0.5*\x,-0.15-0.5*\y) rectangle ++(0.3cm,0.3cm);
+    }
+    \foreach \x in {21,...,28}{
+    \draw (0.5*\x,-0.15-0.5*\y) rectangle ++(0.3cm,0.3cm);
+    }
+    \foreach \x in {31,...,38}{
+    \draw (0.5*\x,-0.15-0.5*\y) rectangle ++(0.3cm,0.3cm);
+    }
+}
+    
+\end{tikzpicture}
+
+\newpage
+\begin{tikzpicture}[scale=0.855]
+    % Draw blocks, inputs and outputs
+    %\foreach \y in {0,1,2,3,4,5} {
+    %    \node at (0,-\y) {\texttt{0x0\y}};
+    %    \draw[step=1cm] (0.99,-\y) grid (9,-\y+1);
+    %}
+\foreach \x in {1,...,8}{
+\filldraw (0.5*\x,0.675) rectangle ++(0.3cm,0.9cm) ;}
+\foreach \x in {11,...,18}{
+\filldraw (0.5*\x,0.675) rectangle ++(0.3cm,0.9cm) ;}
+\foreach \x in {21,...,28}{
+\filldraw (0.5*\x,0.675) rectangle ++(0.3cm,0.9cm) ;}
+\foreach \x in {31,...,38}{
+\filldraw (0.5*\x,0.675) rectangle ++(0.3cm,0.9cm) ;}
+
+\foreach \x in {1,...,8}{
+\filldraw (0.5*\x,-33.125) rectangle ++(0.3cm,0.9cm) ;}
+\foreach \x in {11,...,18}{
+\filldraw (0.5*\x,-33.125) rectangle ++(0.3cm,0.9cm) ;}
+\foreach \x in {21,...,28}{
+\filldraw (0.5*\x,-33.125) rectangle ++(0.3cm,0.9cm) ;}
+\foreach \x in {31,...,38}{
+\filldraw (0.5*\x,-33.125) rectangle ++(0.3cm,0.9cm) ;}
+
+
+
+\foreach \y in {0,...,63} {
+\filldraw (20,-0.125-0.5*\y) rectangle ++(0.9cm,0.3cm) ;
+}
+
+       \filldraw (20,0.675) rectangle ++(0.9cm,0.9cm) ;
+       \filldraw (20,-33.125) rectangle ++(0.9cm,0.9cm) ;
+       
+       \filldraw (-0.875,0.675) rectangle ++(0.9cm,0.9cm) ;
+       \filldraw (-0.875,-33.125) rectangle ++(0.9cm,0.9cm) ;
+
+      
+\foreach \y in {0,...,63} {
+\node at (0,-0.5*\y) {\texttt{{0x\padzeroes[2]\Hexadecimalnum{
+\thehexByteFilled}}\stepcounter{hexByteFilled}}};
+}
+\foreach \y in {0,...,63} {
+\node at (5,-0.5*\y) {\texttt{{0x\padzeroes[2]\Hexadecimalnum{
+\thehexByteFilled}}\stepcounter{hexByteFilled}}};
+}
+\foreach \y in {0,...,63} {
+\node at (10,-0.5*\y) {\texttt{{0x\padzeroes[2]\Hexadecimalnum{
+\thehexByteFilled}}\stepcounter{hexByteFilled}}};
+}
+\foreach \y in {0,...,63} {
+\node at (15,-0.5*\y) {\texttt{{0x\padzeroes[2]\Hexadecimalnum{
+\thehexByteFilled}}\stepcounter{hexByteFilled}}};
+}
+
+
+\foreach \y in {0,...,63} {
+    \foreach \x in {1,...,8}{
+    \filldraw (0.5*\x,-0.15-0.5*\y) rectangle ++(0.3cm,0.3cm);
+    }
+    \foreach \x in {11,...,18}{
+    \filldraw (0.5*\x,-0.15-0.5*\y) rectangle ++(0.3cm,0.3cm);
+    }
+    \foreach \x in {21,...,28}{
+    \filldraw (0.5*\x,-0.15-0.5*\y) rectangle ++(0.3cm,0.3cm);
+    }
+    \foreach \x in {31,...,38}{
+    \filldraw (0.5*\x,-0.15-0.5*\y) rectangle ++(0.3cm,0.3cm);
+    }
+}
+    
+\end{tikzpicture}
+
+\end{document}
